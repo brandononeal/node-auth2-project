@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const User = require("./user-model");
-const { restricted } = require("../middleware/middleware");
+const restricted = require("../middleware/restricted");
 
 router.get("/", restricted, (req, res) => {
   User.find()
